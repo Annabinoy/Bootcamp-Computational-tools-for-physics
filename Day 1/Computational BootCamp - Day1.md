@@ -122,6 +122,16 @@ def greet(name):
 print(greet("World"))
 
 ```
+#### 4. Setting up Git
+To check if the Git is installed:
+```bash
+git --version
+```
+Open a terminal or command prompt and configure Git:
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
 
 ##### References:
 1. [`A beginner's guide to Git version control`](https://developers.redhat.com/articles/2023/08/02/beginners-guide-git-version-control#)
