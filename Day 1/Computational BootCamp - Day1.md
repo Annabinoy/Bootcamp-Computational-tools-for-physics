@@ -65,28 +65,14 @@ chmod +x greet.sh
 ./greet.sh
 
 ```
-#### 3. Setting up Git
-To check if the Git is installed:
-```bash
-git --version
-```
-Open a terminal or command prompt and configure Git:
-```bash
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-```
 
-#### 4. Creating a Local Repository
-1. Create a new directory for your project:
+4. Create a new directory for your project:
 ```bash
 mkdir my-bash-project
 cd my-bash-project
 ```
-2. Initialize the Git repository:
-```bash
-git init
-```
-#### 5. Creating and Editing Files
+
+#### 3. Creating and Editing Files
 1. Create a README file:
 ```bash
 echo "# My Bash Project" > README.md
@@ -135,59 +121,6 @@ def greet(name):
 
 print(greet("World"))
 
-```
-#### 6. Staging and Committing Changes
-1. Check the status of your repository:
-```bash
-git status
-```
-2. Stage the files:
-```bash
-git add README.md main.py file_info.sh greet.sh
-```
-3. Commit the changes:
-```bash
-git commit -m "Initial commit: Add README, bash scripts and main.py"
-```
-#### 7. Creating Branches
-1. Create a new branch:
-```bash
-git branch feature-greeting
-```
-2. Switch to the new branch:
-```bash
-git checkout feature-greeting
-```
-3. Modify `main.py`:
-```python
-def greet(name):
-    return f"Hello, {name}! Welcome to Git practice."
-
-print(greet("World"))
-```
-4. Stage and commit the changes:
-```bash
-git add main.py
-git commit -m "Update greeting message"
-```
-#### 8. Merging Branches
-1. Switch back to the master branch:
-```bash
-git checkout master
-```
-2. Merge the feature branch:
-```bash
-git merge feature-greeting
-```
-#### 9. Creating a Remote Repository (GitHub)
-1. Go to GitHub and create a new repository named "my-first-repo":
-2. Link your local repository to the remote:
-```bash
-git remote add origin https://github.com/your-username/my-first-repo.git
-```
-3. Push your local repository to GitHub:
-```bash
-git push -u origin master
 ```
 
 ##### References:
