@@ -1,15 +1,16 @@
 
-#### Prerequisites
+### Prerequisites
 1. Install Git:
 	- Windows: Download and install from https://git-scm.com/download/win
 	- macOS: Install using Homebrew: brew install git
 	- Linux: Use your package manager, e.g., sudo apt-get install git	- 
 2.  Install WSL:
-	 - Download and install from https://code.visualstudio.com/
+	 - One can follow this [tutorial](https://www.howtogeek.com/744328/how-to-install-the-windows-subsystem-for-linux-on-windows-11/).
 3.  Install Visual Studio Code:
 	 - Download and install from https://code.visualstudio.com/
-#### Hands-on Practice Session
-###### 1. Basic Shell Commands  
+	 - One can also follow this [tutorial](https://microsoft.github.io/vscode-essentials/en/01-getting-started.html).
+### Hands-on Practice Session
+#### 1. Basic Shell Commands  
 Open a terminal and practice these essential commands:
 ```bash
 pwd                 # Print working directory
@@ -25,7 +26,7 @@ rm -r <directory>   # Remove a directory and its contents
 
 ```
 
-###### 2. Creating a Bash Script
+#### 2. Creating a Bash Script
 1. Create a new file named `greet.sh`:
 ```bash
 touch greet.sh
@@ -64,14 +65,18 @@ chmod +x greet.sh
 ./greet.sh
 
 ```
-###### 3. Setting up Git
+#### 3. Setting up Git
+To check if the Git is installed:
+```bash
+git --version
+```
 Open a terminal or command prompt and configure Git:
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
 
-###### 4. Creating a Local Repository
+#### 4. Creating a Local Repository
 1. Create a new directory for your project:
 ```bash
 mkdir my-bash-project
@@ -81,7 +86,7 @@ cd my-bash-project
 ```bash
 git init
 ```
-###### 5. Creating and Editing Files from the terminal
+#### 5. Creating and Editing Files
 1. Create a README file:
 ```bash
 echo "# My Bash Project" > README.md
@@ -118,20 +123,12 @@ echo "File type: $(file -b "$filename")"
 ```bash
 chmod +x file_info.sh
 ```
-
-###### 6. Creating and Editing Files in VS Code
-1. Open Visual Studio Code:
+ 5. Run the script::
 ```bash
-code .
-
+./file_info.sh ../greet.sh
 ```
-2. Open the file named `README.md` and can edit the following content(optional):
-```text
-# My First Repository
 
-This is a practice repository for learning Git and GitHub.
-```
-3. Create another file named `main.py` with the following content:
+6. Create another file named `main.py` with the following content:
 ```python
 def greet(name):
     return f"Hello, {name}!"
@@ -139,7 +136,7 @@ def greet(name):
 print(greet("World"))
 
 ```
-###### 7. Staging and Committing Changes
+#### 6. Staging and Committing Changes
 1. Check the status of your repository:
 ```bash
 git status
@@ -152,7 +149,7 @@ git add README.md main.py file_info.sh greet.sh
 ```bash
 git commit -m "Initial commit: Add README, bash scripts and main.py"
 ```
-###### 8. Creating Branches
+#### 7. Creating Branches
 1. Create a new branch:
 ```bash
 git branch feature-greeting
@@ -173,16 +170,16 @@ print(greet("World"))
 git add main.py
 git commit -m "Update greeting message"
 ```
-###### 9. Merging Branches
-1. Switch back to the main branch:
+#### 8. Merging Branches
+1. Switch back to the master branch:
 ```bash
-git checkout main
+git checkout master
 ```
 2. Merge the feature branch:
 ```bash
 git merge feature-greeting
 ```
-###### 10. Creating a Remote Repository (GitHub)
+#### 9. Creating a Remote Repository (GitHub)
 1. Go to GitHub and create a new repository named "my-first-repo":
 2. Link your local repository to the remote:
 ```bash
@@ -190,13 +187,10 @@ git remote add origin https://github.com/your-username/my-first-repo.git
 ```
 3. Push your local repository to GitHub:
 ```bash
-git push -u origin main
+git push -u origin master
 ```
-###### 11. Collaborative Work
-1. Create a new directory for your project:
-2. Initialize the Git repository:
 
-###### References:
+##### References:
 1. [`A beginner's guide to Git version control`](https://developers.redhat.com/articles/2023/08/02/beginners-guide-git-version-control#)
 2. [`The Shell Scripting Tutorial`](https://www.shellscript.sh/)
 3. [`Remote Linux Tutorial`](https://www.classes.cs.uchicago.edu/archive/2021/spring/15200-1/resources/linux.html)
